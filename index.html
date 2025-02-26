@@ -72,26 +72,6 @@
             box-shadow: 0 0 20px rgba(255,192,203,0.5);
         }
 
-        .sparkle {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            background: 
-                radial-gradient(circle, white 0%, transparent 60%) 0 0/10px 10px,
-                radial-gradient(circle, white 0%, transparent 60%) 5px 5px/10px 10px;
-            animation: sparkle 1.5s infinite linear;
-            opacity: 0.5;
-        }
-
-        @keyframes sparkle {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-
         .photo {
             max-width: 500px;
             border-radius: 5px;
@@ -114,7 +94,6 @@
         <h1>The Wonderful World of Shelties</h1>
         
         <div class="photo-frame">
-            <div class="sparkle"></div>
             <img src="IMG_8182.PNG" alt="Sheltie of the Month" class="photo">
         </div>
 
