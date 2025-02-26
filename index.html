@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wonderful World of Shelties</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #b3e0ff;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .cloud {
+            position: absolute;
+            width: 100px;
+            height: 40px;
+            background: white;
+            border-radius: 20px;
+            animation: float 15s infinite linear;
+            opacity: 0.8;
+        }
+
+        .cloud:before, .cloud:after {
+            content: '';
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .cloud:before {
+            width: 50px;
+            height: 50px;
+            top: -20px;
+            left: 15px;
+        }
+
+        .cloud:after {
+            width: 30px;
+            height: 30px;
+            top: -10px;
+            left: 45px;
+        }
+
+        @keyframes float {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(100vw); }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin-bottom: 40px;
+        }
+
+        .photo-frame {
+            position: relative;
+            display: inline-block;
+            padding: 20px;
+            background: pink;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255,192,203,0.5);
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            background: 
+                radial-gradient(circle, white 0%, transparent 60%) 0 0/10px 10px,
+                radial-gradient(circle, white 0%, transparent 60%) 5px 5px/10px 10px;
+            animation: sparkle 1.5s infinite linear;
+            opacity: 0.5;
+        }
+
+        @keyframes sparkle {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .photo {
+            max-width: 500px;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #444;
+            font-size: 2em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated clouds -->
+    <div class="cloud" style="top: 20%; animation-delay: 0s;"></div>
+    <div class="cloud" style="top: 40%; animation-delay: -5s;"></div>
+    <div class="cloud" style="top: 60%; animation-delay: -10s;"></div>
+
+    <div class="container">
+        <h1>The Wonderful World of Shelties</h1>
+        
+        <div class="photo-frame">
+            <div class="sparkle"></div>
+            <!-- Replace 'your-image.jpg' with your actual image file name -->
+            <img src="your-image.jpg" alt="Sheltie of the Month" class="photo">
+        </div>
+
+        <h2>Cleo - Sheltie of the Month</h2>
+    </div>
+</body>
+</html>
